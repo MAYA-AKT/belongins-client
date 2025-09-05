@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+a.active:focus{
+    border-bottom: 2px solid red;
+}
