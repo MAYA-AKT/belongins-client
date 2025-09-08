@@ -1,7 +1,19 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
+body{
+    padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+#root{
+background:rgb(242, 242, 247); ;
+}
 a.active:focus{
     border-bottom: 2px solid red;
 }
+
+/* #FFF5F2  soft pink */
+/* #F5BABB pink */
+/* #568F87 soft teal */
+/* #064232 teal */

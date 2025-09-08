@@ -4,7 +4,7 @@ import { Outlet } from 'react-router';
 
 const Root = () => {
     return (
-        <div className='md:w-10/12 mx-auto'>
+        <div className='md:w-10/12 mx-auto  min-h-screen'>
             <Header/>
             <Outlet/>
         </div>

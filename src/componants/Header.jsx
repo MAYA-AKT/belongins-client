@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { use } from 'react';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../context/AuthContext';
 
 const Header = () => {
+    const { user, singOutUser } = use(AuthContext);
+
+    const handleSignOut = () => {
+        singOutUser()
+            .then(() => {
+                alert('user successfully sign out');
+            }).catch(err => {
+                console.log('sign out err', err);
+
+            })
+    }
+
 
     return (
         <div>
-            <div className="navbar bg-base-100 ">
+            <div className="navbar  ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,25 +40,33 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img
-                                    alt="Tailwind CSS Navbar component"
-                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    {
+                        user ? <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img
+                                        alt="Tailwind CSS Navbar component"
+                                        title={user?.displayName}
+                                        src={user?.photoURL} />
+                                </div>
                             </div>
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 py-6 px-4 space-y-2 shadow">
-                            <NavLink>Add Lost&Found Item</NavLink>
-                            <NavLink>All Recovered Items</NavLink>
-                            <NavLink>Manage My Items</NavLink>
-                           
-                                <button className='btn '>Sign Out</button>
-                           
-                        </ul>
-                    </div>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 py-6 px-4 space-y-2 shadow">
+                                <NavLink to='/add-items'>Add Lost&Found Item</NavLink>
+                                <NavLink>All Recovered Items</NavLink>
+                                <NavLink>Manage My Items</NavLink>
+
+                                 <button onClick={handleSignOut} className='btn'>Sign Out</button> 
+                                        
+                                
+
+
+
+                            </ul>
+                        </div> : <NavLink to='/auth/signup'>SignUp</NavLink>
+                  }
+
                 </div>
             </div>
         </div>
