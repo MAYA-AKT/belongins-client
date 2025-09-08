@@ -1,17 +1,17 @@
 import React, { use } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
-
+ import { toast } from 'react-toastify';
 const Header = () => {
     const { user, singOutUser } = use(AuthContext);
 
     const handleSignOut = () => {
         singOutUser()
             .then(() => {
-                alert('user successfully sign out');
+                toast.success('user successfully sign out');
             }).catch(err => {
                 console.log('sign out err', err);
-
+                 toast.error(err)
             })
     }
 

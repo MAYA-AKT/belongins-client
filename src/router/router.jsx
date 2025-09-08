@@ -6,6 +6,7 @@ import AddItems from "../pages/AddItems";
 import Authentication from "../componants/Authentication";
 import SignUp from "../pages/SignUp";
 import SignIn from "../pages/SignIn";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -18,7 +19,11 @@ export const router = createBrowserRouter([
             },
             {
                 path:'lost-found',
-                Component:LostFound
+               element:(
+                <PrivateRoute>
+                    <LostFound/>
+                </PrivateRoute>
+               ),
             },
             {
                 path:'add-items',

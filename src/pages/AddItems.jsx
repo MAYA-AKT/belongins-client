@@ -3,23 +3,9 @@ import React from 'react';
 
 const AddItems = () => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return (
+  return (
         <>
-           
+           <h1>Add Lost and Found Items </h1>
         </>
 
     );
