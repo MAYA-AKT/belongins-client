@@ -36,7 +36,7 @@ const Header = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-4">
                         <NavLink to='/'>Home</NavLink>
-                        <NavLink to='/lost-found'>Lost & Found Item</NavLink>
+                        <NavLink to='/lost-found'>Lost & Found Items</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">

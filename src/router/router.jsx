@@ -12,49 +12,51 @@ import axios from "axios";
 
 export const router = createBrowserRouter([
     {
-        path:'/',
-        Component:Root,
-        children:[
+        path: '/',
+        Component: Root,
+        children: [
             {
-                index:true,
-                Component:Home
+                index: true,
+                Component: Home
             },
             {
-                path:'lost-found',
-               element:(
-                <PrivateRoute>
-                    <LostFound/>
-                </PrivateRoute>
-               ),
+                path: 'lost-found',
+                loader:()=> axios.get(`${import.meta.env.VITE_apiUrl}/all-items`),
+                element: (
+                    <PrivateRoute>
+                        <LostFound />
+                    </PrivateRoute>
+                ),
+                hydrateFallbackElement: <p>Error</p>
             },
             {
-                path:'details/:id',
-                loader:({params})=>axios.get(`${import.meta.env.VITE_apiUrl}/item-details/${params.id}`),
-                element:(
-                <PrivateRoute>
-                    <ItemsDetails/>
-                </PrivateRoute>
-               ),
-               hydrateFallbackElement:<p>Error</p>
+                path: 'details/:id',
+                loader: ({ params }) => axios.get(`${import.meta.env.VITE_apiUrl}/item-details/${params.id}`),
+                element: (
+                    <PrivateRoute>
+                        <ItemsDetails />
+                    </PrivateRoute>
+                ),
+                hydrateFallbackElement: <p>Error</p>
             },
             {
-                path:'add-items',
-                Component:AddItems
+                path: 'add-items',
+                Component: AddItems
             }
         ]
     },
     {
-        path:'auth',
-        Component:Authentication,
-        children:[
+        path: 'auth',
+        Component: Authentication,
+        children: [
             {
-               path:'/auth/signup',
-               Component:SignUp
+                path: '/auth/signup',
+                Component: SignUp
             },
             {
-                path:'/auth/signin',
-                Component:SignIn
-                
+                path: '/auth/signin',
+                Component: SignIn
+
             }
         ]
     }

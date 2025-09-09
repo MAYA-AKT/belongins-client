@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router';
 const ItemsDetails = () => {
     const item = useLoaderData();
     const { _id, thumbnail, title, postType, category, date, description, email, location, name, photo } = item.data;
-    console.log(item);
+   
 
     return (
         <div className=" bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row my-10 p-10">

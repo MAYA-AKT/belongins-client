@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import LatestFindLostItemCard from './LatestFindLostItemCard';
+import { Link } from 'react-router';
 
 const LatestFindLostItems = () => {
     const [latestItems, setLatestItems] = useState([]);
@@ -30,7 +31,9 @@ const LatestFindLostItems = () => {
 
 
             }
-            <button>See All</button>
+            <div className='flex justify-end my-10'>
+                <Link to='/lost-found' className=' text-lg border-b text-[#568F87]'>See all</Link>
+            </div>
         </div>
     );
 };
