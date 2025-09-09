@@ -16,7 +16,7 @@ const LatestFindLostItems = () => {
     }, [])
     return (
         <div>
-            <h1>Latest Find & Lost Items</h1>
+            <h1 className='text-xl text-[#568F87] my-7'>Latest Find & Lost Items</h1>
             {
                 latestItems.length === 0 ? <p>Loading...</p> :
 
@@ -30,6 +30,7 @@ const LatestFindLostItems = () => {
 
 
             }
+            <button>See All</button>
         </div>
     );
 };

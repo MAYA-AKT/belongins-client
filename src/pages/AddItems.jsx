@@ -21,7 +21,9 @@ const AddItems = () => {
 
         const formData = new FormData(form)
         const newItem = Object.fromEntries(formData.entries());
-        console.log(newItem);
+       
+        newItem.photo = user?.photoURL;
+        
 
 
 
