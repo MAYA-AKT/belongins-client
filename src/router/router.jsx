@@ -9,6 +9,7 @@ import SignIn from "../pages/SignIn";
 import PrivateRoute from "./PrivateRoute";
 import ItemsDetails from "../pages/ItemsDetails";
 import axios from "axios";
+import MyItems from "../pages/MyItems";
 
 export const router = createBrowserRouter([
     {
@@ -23,9 +24,9 @@ export const router = createBrowserRouter([
                 path: 'lost-found',
                 loader:()=> axios.get(`${import.meta.env.VITE_apiUrl}/all-items`),
                 element: (
-                    <PrivateRoute>
+                   
                         <LostFound />
-                    </PrivateRoute>
+                    
                 ),
                 hydrateFallbackElement: <p>Error</p>
             },
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
             {
                 path: 'add-items',
                 Component: AddItems
+            },
+            {
+                path:'my-items',
+                Component:MyItems
             }
         ]
     },
