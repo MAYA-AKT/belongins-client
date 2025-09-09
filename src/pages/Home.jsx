@@ -1,9 +1,13 @@
 import React from 'react';
+import LatestFindLostItems from '../componants/LatestFindLostItems';
 
 const Home = () => {
     return (
         <div className=''>
-            Home
+           <h1>Banner</h1>
+           <div>
+            <LatestFindLostItems/>
+           </div>
         </div>
     );
 };
