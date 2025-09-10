@@ -4,9 +4,15 @@ import { AuthContext } from '../context/AuthContext';
 import { Link, NavLink } from 'react-router';
 import { MdError } from "react-icons/md";
 import Swal from 'sweetalert2';
+import { useTitle } from '../hooks/useTitle';
 
 
 const MyItems = () => {
+   
+    //    add dynamic title 
+ useTitle('my-items');
+
+
     const { user } = use(AuthContext);
     const [myItems, setMyItems] = useState([]);
     useEffect(() => {

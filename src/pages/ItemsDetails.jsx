@@ -5,8 +5,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 import Swal from 'sweetalert2';
  import { toast } from 'react-toastify';
+import { useTitle } from '../hooks/useTitle';
 
 const ItemsDetails = () => {
+    
+    // use dynamic title
+    useTitle('item-details');
+
+
     const item = useLoaderData();
     const navigate = useNavigate();
     const { _id, thumbnail, title, postType, category, date, description, email, location, name, photo,status } = item.data;

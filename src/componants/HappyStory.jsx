@@ -47,7 +47,7 @@ const reviews = [
            
             <div className="w-full lg:w-1/2 max-w-xl text-gray-700">
                 <h2 className="text-3xl font-semibold mb-6 text-center lg:text-left">
-                    Fresh Food. <span className="text-green-800 font-bold">Our Success Storys</span>
+                   Our  <span className="text-green-800 font-bold"> Success Storys</span>
                 </h2>
                 <Swiper
                     modules={[Pagination]}

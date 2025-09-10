@@ -4,10 +4,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { useTitle } from '../hooks/useTitle';
 
 
 const AddItems = () => {
 
+    //    add dynamic title 
+ useTitle('Add-Items');
 
 
     const { user } = use(AuthContext);

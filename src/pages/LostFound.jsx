@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import AllItemsCard from '../componants/AllItemsCard';
+import { useTitle } from '../hooks/useTitle';
 
 const LostFound = () => {
+   
+    //    add dynamic title 
+ useTitle('lost-found');
+
+
     const allItems = useLoaderData();
     const [items] = useState(allItems.data);
     console.log(items);

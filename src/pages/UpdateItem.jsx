@@ -5,10 +5,18 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { useLoaderData, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
+import { useTitle } from '../hooks/useTitle';
 
 
 
 const UpdateItem = () => {
+
+   //    add dynamic title 
+ useTitle('update-item');
+
+
+
+
     const navigate = useNavigate();
 
     const [selectedDate, setSelectedDate] = useState(new Date());

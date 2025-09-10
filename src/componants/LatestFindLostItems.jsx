@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import LatestFindLostItemCard from './LatestFindLostItemCard';
 import { Link } from 'react-router';
+import loadding from '../assets/lottiereact/loading.json';
+import Lottie from 'lottie-react';
 
 const LatestFindLostItems = () => {
     const [latestItems, setLatestItems] = useState([]);
@@ -16,12 +18,12 @@ const LatestFindLostItems = () => {
             })
     }, [])
     return (
-        <div>
+        <div className=''>
             <h1 className='text-xl text-[#568F87] my-5'>Latest Find & Lost Items</h1>
             {
-                latestItems.length === 0 ? <p>Loading...</p> :
+                latestItems.length === 0 ? <Lottie animationData={loadding}></Lottie> :
 
-                    <div className=" ">
+                    <div className=" bg-white p-10 ">
                         <div className="grid md:grid-cols-6 grid-cols-2 gap-4">
                             {latestItems.map(item => (
                                 <LatestFindLostItemCard key={item._id} item={item} />

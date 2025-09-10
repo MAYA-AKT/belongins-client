@@ -11,8 +11,16 @@ import { IoTabletLandscapeOutline } from "react-icons/io5";
 import RecoverdCard from '../componants/RecoverdCard';
 import RecoverdTable from '../componants/RecoverdTable';
 import { CiGrid2H } from "react-icons/ci";
+import { useTitle } from '../hooks/useTitle';
 
 const AllRecoverdItem = () => {
+
+//    add dynamic title 
+ useTitle('recovered-items');
+
+
+
+
     const { user } = use(AuthContext);
     const [format, setFormat] = useState(true);
     const [recItems, setRecItems] = useState([]);

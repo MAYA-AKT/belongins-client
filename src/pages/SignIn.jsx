@@ -2,8 +2,17 @@ import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
  import { toast } from 'react-toastify';
+import { useTitle } from '../hooks/useTitle';
 
 const SignIn = () => {
+   
+    //    add dynamic title 
+ useTitle('signin');
+
+
+
+
+
     const { signinUser,signInGoogle } = use(AuthContext);
     const [message, setMessage] = useState('');
     const navigate = useNavigate();

@@ -2,7 +2,17 @@ import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
  import { toast } from 'react-toastify';
+import { useTitle } from '../hooks/useTitle';
 const SignUp = () => {
+   
+    //    add dynamic title 
+ useTitle('sign-up');
+
+
+
+
+
+
     const { createUser, updateUser } = use(AuthContext);
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
