@@ -11,6 +11,7 @@ import ItemsDetails from "../pages/ItemsDetails";
 import axios from "axios";
 import MyItems from "../pages/MyItems";
 import UpdateItem from "../pages/UpdateItem";
+import AllRecoverdItem from "../pages/AllRecoverdItem";
 
 export const router = createBrowserRouter([
     {
@@ -23,11 +24,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'lost-found',
-                loader:()=> axios.get(`${import.meta.env.VITE_apiUrl}/all-items`),
+                loader: () => axios.get(`${import.meta.env.VITE_apiUrl}/all-items`),
                 element: (
-                   
+                    <PrivateRoute>
                         <LostFound />
-                    
+                    </PrivateRoute>
                 ),
                 hydrateFallbackElement: <p>Error</p>
             },
@@ -46,7 +47,7 @@ export const router = createBrowserRouter([
                 Component: AddItems
             },
             {
-                path:'my-items',
+                path: 'my-items',
                 element: (
                     <PrivateRoute>
                         <MyItems />
@@ -54,7 +55,17 @@ export const router = createBrowserRouter([
                 ),
             },
             {
-                path:'update-item/:id',
+                path: 'recoverd-items',
+
+                element: (
+                    <PrivateRoute>
+                        <AllRecoverdItem />
+                    </PrivateRoute>
+                ),
+
+            },
+            {
+                path: 'update-item/:id',
                 loader: ({ params }) => axios.get(`${import.meta.env.VITE_apiUrl}/item-details/${params.id}`),
                 element: (
                     <PrivateRoute>

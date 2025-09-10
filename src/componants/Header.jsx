@@ -54,7 +54,7 @@ const Header = () => {
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 py-6 px-4 space-y-2 shadow">
                                 <NavLink to='/add-items'>Add Lost&Found Item</NavLink>
-                                <NavLink>All Recovered Items</NavLink>
+                                <NavLink to='/recoverd-items'>All Recovered Items</NavLink>
                                 <NavLink to='/my-items'>Manage My Items</NavLink>
 
                                  <button onClick={handleSignOut} className='btn'>Sign Out</button> 
