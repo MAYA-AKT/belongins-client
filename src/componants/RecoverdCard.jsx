@@ -6,8 +6,8 @@ const RecoverdCard = ({ item }) => {
     const { date, location, email, name } = item;
     return (
         <>
-            <div className='bg-white'>
-                <div className="flex justify-between p-8 ">
+            <div className='bg-white '>
+                <div className="flex justify-between md:p-8 p-6 ">
                     
 
                     <div className="">

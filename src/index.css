@@ -10,7 +10,7 @@ body{
 background:rgb(242, 242, 247); ;
 }
 a.active:focus{
-    border-bottom: 2px solid red;
+   color: #0f6b5f;
 }
 
 /* #FFF5F2  soft pink */

@@ -53,7 +53,7 @@ const UpdateItem = () => {
 
     return (
         <div>
-            <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg  mt-8">
+            <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg  mt-20">
                 <h2 className="text-2xl font-bold mb-6 text-center text-[#568F87]">Add Lost/Found Item</h2>
                 <form onSubmit={handleUpdateItem} className="">
                     <div className="grid md:grid-cols-2 gap-4">

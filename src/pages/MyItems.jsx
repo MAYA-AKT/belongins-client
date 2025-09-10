@@ -72,7 +72,7 @@ const MyItems = () => {
 
     
     return (
-        <div className="overflow-x-auto bg-white md:p-20 py-7 my-10">
+        <div className="overflow-x-auto bg-white md:p-20 py-7 mt-20">
             <table className="min-w-full table-auto border-collapse ">
                 <thead className="bg-[#568F87] text-white">
                     <tr>

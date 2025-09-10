@@ -45,9 +45,9 @@ const AllRecoverdItem = () => {
     }
 
     return (
-        <div className='my-20'>
-
-            <div className='space-x-2 flex justify-end my-10'>
+        <div className='md:my-20 my-15'>
+ 
+            <div className='space-x-2 flex justify-end md:my-8 my-4'>
                 <button onClick={() => setFormat(!format)}>
                     <IoGridSharp className={format ? 'text-[#568F87] text-2xl' : 'text-2xl text-gray-500'}/>
                 </button>
@@ -58,7 +58,7 @@ const AllRecoverdItem = () => {
 
             <div>
                 {format === true ? <>
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-4 p-4 md:p-0'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                         {
                             recItems.map((item) => <RecoverdCard key={item._id} item={item} />)
                         }

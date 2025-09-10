@@ -50,9 +50,9 @@ const SignUp = () => {
     }
     return (
         <>
-            <div className=" flex items-center h-screen justify-center ">
+            <div className=" flex justify-center my-10 md:p-0 ">
                 <div className="w-full max-w-md bg-white shadow-lg rounded-2xl p-6">
-                    <h2 className="text-2xl font-bold text-center text-[#568F87] mb-6">
+                    <h2 className="text-2xl font-bold text-center text-[#568F87] ">
                         Sign Up
                     </h2>
                     <form onSubmit={handleSignUp} className="space-y-4">
@@ -63,7 +63,7 @@ const SignUp = () => {
                                 type="text"
                                 name='name'
                                 placeholder="Enter your name"
-                                className="mt-1 block w-full px-4 py-2  rounded-lg shadow-sm focus:ring focus:ring-blue-300 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border rounded-lg shadow-sm border-[#568F87] outline-[#568F87]"
                             />
                         </div>
 
@@ -74,7 +74,7 @@ const SignUp = () => {
                                 type="email"
                                 name='email'
                                 placeholder="Enter your email"
-                                className="mt-1 block w-full px-4 py-2  rounded-lg shadow-sm focus:ring focus:ring-blue-300 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border rounded-lg shadow-sm border-[#568F87] outline-[#568F87]"
                             />
                         </div>
 
@@ -85,7 +85,7 @@ const SignUp = () => {
                                 type="url"
                                 name='photo'
                                 placeholder="Enter your photo URL"
-                                className="mt-1 block w-full px-4 py-2  rounded-lg shadow-sm focus:ring focus:ring-blue-300 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border rounded-lg shadow-sm border-[#568F87] outline-[#568F87]"
                             />
                         </div>
 
@@ -96,7 +96,7 @@ const SignUp = () => {
                                 type="password"
                                 name='password'
                                 placeholder="Enter your password"
-                                className="mt-1 block w-full px-4 py-2  rounded-lg shadow-sm focus:ring focus:ring-blue-300 focus:border-blue-500"
+                                className="mt-1 block w-full px-4 py-2 border rounded-lg shadow-sm border-[#568F87] outline-[#568F87]"
                             />
                         </div>
                         <div>
