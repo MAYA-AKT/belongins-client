@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import ItemsDetails from "../pages/ItemsDetails";
 import axios from "axios";
 import MyItems from "../pages/MyItems";
+import UpdateItem from "../pages/UpdateItem";
 
 export const router = createBrowserRouter([
     {
@@ -46,8 +47,21 @@ export const router = createBrowserRouter([
             },
             {
                 path:'my-items',
-                Component:MyItems
-            }
+                element: (
+                    <PrivateRoute>
+                        <MyItems />
+                    </PrivateRoute>
+                ),
+            },
+            {
+                path:'update-item/:id',
+                loader: ({ params }) => axios.get(`${import.meta.env.VITE_apiUrl}/item-details/${params.id}`),
+                element: (
+                    <PrivateRoute>
+                        <UpdateItem />
+                    </PrivateRoute>
+                ),
+            },
         ]
     },
     {

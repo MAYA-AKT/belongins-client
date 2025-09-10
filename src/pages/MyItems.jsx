@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { MdError } from "react-icons/md";
 import Swal from 'sweetalert2';
 
@@ -34,7 +34,7 @@ const MyItems = () => {
                 axios.delete(`${import.meta.env.VITE_apiUrl}/delete-item/${id}`)
                     .then((res) => {
                         console.log(res);
-                        const remainingItems = myItems.filter(item=>item._id !== id);
+                        const remainingItems = myItems.filter(item => item._id !== id);
                         setMyItems(remainingItems);
                         Swal.fire({
                             title: "Deleted!",
@@ -105,9 +105,11 @@ const MyItems = () => {
                                 {new Date(item.date).toLocaleDateString()}
                             </td>
                             <td className="px-4 py-2 text-sm text-center space-x-2 space-y-2">
-                                <button className="bg-green-600 hover:bg-green-700 text-white font-bold px-3 py-2  rounded text-xs">
-                                    Update
-                                </button>
+                                <NavLink to={`/update-item/${item._id}`}>
+                                    <button className="bg-green-600 hover:bg-green-700 text-white font-bold px-3 py-2  rounded text-xs">
+                                        Update
+                                    </button>
+                                </NavLink>
                                 <button
                                     onClick={() => handleDeleteItem(item._id)}
                                     className="bg-yellow-600 hover:bg-yellow-700 font-bold text-white px-3 py-2 rounded text-xs">
