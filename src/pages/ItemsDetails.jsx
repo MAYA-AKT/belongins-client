@@ -46,7 +46,7 @@ const ItemsDetails = () => {
     }
 
     return (
-        <div className=" bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row my-10 p-10">
+        <div className=" bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row mt-15 p-10">
 
             <div className="md:w-1/3 h-64 md:h-auto">
                 <img
