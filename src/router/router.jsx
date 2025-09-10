@@ -12,6 +12,7 @@ import axios from "axios";
 import MyItems from "../pages/MyItems";
 import UpdateItem from "../pages/UpdateItem";
 import AllRecoverdItem from "../pages/AllRecoverdItem";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
     {
@@ -89,5 +90,9 @@ export const router = createBrowserRouter([
 
             }
         ]
+    },
+    {
+        path:'*',
+        Component:ErrorPage
     }
 ])
