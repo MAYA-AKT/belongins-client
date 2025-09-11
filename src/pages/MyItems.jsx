@@ -11,12 +11,18 @@ const MyItems = () => {
    
     //    add dynamic title 
  useTitle('my-items');
-
+ 
 
     const { user } = use(AuthContext);
+    console.log('token',user?.accessToken);
+    
     const [myItems, setMyItems] = useState([]);
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_apiUrl}/my-items/${user?.email}`)
+        axios.get(`${import.meta.env.VITE_apiUrl}/my-items/${user?.email}`,{
+            headers:{
+                authorization:`Bearer ${user?.accessToken}`
+            }
+        })
             .then(res => {
                 console.log(res.data);
                 setMyItems(res.data);

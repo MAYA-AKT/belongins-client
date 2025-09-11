@@ -1,12 +1,36 @@
-# React + Vite
+# Lost and Found Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Purpose
+The Lost and Found Website is a platform designed to connect individuals who have lost personal belongings with those who may have found them. It allows users to report lost items, browse found items, and interact with others to recover belongings. The goal is to simplify the process of locating lost items while encouraging community collaboration.
 
-Currently, two official plugins are available:
+## 🌐 Live URL
+[Live Demo](https://your-live-url-here.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
+- 🔐 **User Authentication** – Secure login and registration using Firebase.
+- 📝 **Report Lost/Found Items** – Users can submit details, including images, location, and date.
+- 📦 **Item Management** – Users can update or delete their submitted items.
+- 🖼️ **Image Uploads** – Upload item images for better identification.
+- 📊 **Statistics Section** – Displays the number of users, recovered items, and active cities.
+- 📱 **Responsive Design** – Works smoothly across devices.
 
-## Expanding the ESLint configuration
+## 📦 NPM Packages Used
+- **express** – Backend framework for API development.
+- **cors** – Enable cross-origin requests.
+- **dotenv** – Manage environment variables.
+- **mongodb** – Database for storing user and item details.
+- **firebase-admin** – Firebase authentication and admin SDK.
+- **react** – Frontend UI framework.
+- **react-router-dom** – For routing and navigation.
+- **axios** – For making API requests.
+- **tailwindcss** – Styling framework for responsive UI.
+- **framer-motion** – Animations and transitions.
+- **lottie-react** – For animations on the website.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 How to Run Locally
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/your-username/lost-found-website.git
+   cd lost-found-website
