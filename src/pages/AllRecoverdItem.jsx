@@ -28,11 +28,7 @@ const AllRecoverdItem = () => {
    console.log(recItems);
    
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_apiUrl}/all-recoverd-items/${user?.email}`,{
-            headers:{
-                authorization:`Bearer ${user?.accessToken}`
-            }
-        })
+        axios.get(`${import.meta.env.VITE_apiUrl}/all-recoverd-items/${user?.email}`)
             .then(res => {
                 setRecItems(res.data);
             }).catch(err => {

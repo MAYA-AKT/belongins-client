@@ -18,11 +18,7 @@ const MyItems = () => {
     
     const [myItems, setMyItems] = useState([]);
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_apiUrl}/my-items/${user?.email}`,{
-            headers:{
-                authorization:`Bearer ${user?.accessToken}`
-            }
-        })
+        axios.get(`${import.meta.env.VITE_apiUrl}/my-items/${user?.email}`)
             .then(res => {
                 console.log(res.data);
                 setMyItems(res.data);
